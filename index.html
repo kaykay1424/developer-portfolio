@@ -10,13 +10,13 @@
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
         <!-- CSS -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" rel="stylesheet">
-        <link href="css/style.production.css" type="text/css" rel="stylesheet">
+        <link href="css/styles.css" type="text/css" rel="stylesheet">
         <!-- JS -->
         <script src="js/tota11y.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>               
         <script src="js/main.js"></script>         
     </head>
-    <body>
+    <body id="home-page">
         <header>
             <nav class="main-navigation">
                 <div class="nav__collapse-btn">
@@ -45,15 +45,16 @@
         </header>
         <main>
             <section id="profile"> 
-                <figure>
+                <div id="profile__portrait-container">
                     <img src="img/kayla-on-beach.jpeg" class="profile__portrait" alt="An image of me on the beach">
-                </figure>    
-                <h1>Hello World!</h1>
-                <p>My name is Kayla Clements.</p>
-                <p>
-                    I am a <code>&lt;web&gt;</code> developer from OKC.
-                </p>
-                <a href="https://github.com/kaykay1424">Check out some of my code</a>
+                    <div class="speech-bubble"></div>
+                    <div class="speech-bubble"></div>
+                </div>  
+                <div id="profile__intro">
+                    <h1><span>H</span><span>i</span><span>,</span> <span>I</span><span>'</span><span>m</span> <span>K</span><span>a</span><span>y</span><span>l</span><span>a</span> <span>C</span><span>l</span><span>e</span><span>m</span><span>e</span><span>n</span><span>t</span><span>s</span><span>!</span></h1> 
+                    <p><span>I</span><span>'</span><span>m</span> <span>a</span> <strong><span>W</span><span><span>e</span><span>b</span> <span>D</span><span>e</span><span>v</span><span>e</span><span>l</span><span>o</span><span>p</span><span>e</span><span>r</span></strong> <span>l</span><span>i</span><span>v</span><span>i</span><span>n</span><span>g</span> <span>i</span><span>n</span> <span>O</span><span>K</span><span>C</span><span>.</span></p>
+                    <a href="https://github.com/kaykay1424">Check out some of my code</a>
+                </div>   
             </section>
         </main>        
         <footer>
@@ -63,6 +64,6 @@
                 <a href="https://codepen.io/kaykay1424/"><img src="img/social_icons/codepen_icon.svg" alt="CodePen"></a>
                 <a href="https://www.linkedin.com/in/michaela-clements-6b2aa67b/"><img src="img/social_icons/linkedin_icon.svg" alt="LinkedIn"></a>
             </div>
-        </footer>        
+        </footer>       
     </body>
 </html>

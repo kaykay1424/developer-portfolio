@@ -341,10 +341,11 @@ footer img {
     padding: var(--small-element-padding);
 }
 /* -About Page */
-#bio,
-#skills {
+#bio,#skills  {
+    margin-left: auto;
+    margin-right: auto;
     max-width: 100%;
-    width: 500px;
+    width: 600px;
 }
 /* --Illustration */
 .berlin-illustration {
@@ -360,10 +361,17 @@ footer img {
     animation: 4s change-sun-color infinite alternate linear;
 }
 /* --Skills */
+#skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* width: 100%; */
+}
 /* ---Filter Skills Form */
 #skills__form {
+    align-self: flex-start;
     border: var(--main-border);
-    margin: var(--main-margin) auto;
+    margin-bottom: var(--main-margin);
     max-width: 100%;
     width: 300px;
     padding: var(--main-padding);
@@ -666,7 +674,7 @@ footer img {
     }
     #profile__intro {
         align-self: center;
-    }
+    }     
 }
 
 @media screen and (max-width: 800px) {

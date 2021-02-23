@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact</title>
+        <link href="img/portfolio-icon.png" rel="shortcut icon">
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <!-- CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" rel="stylesheet">
+        <link href="css/style.production.css" type="text/css" rel="stylesheet">
+        <!-- JS -->
+        <script src="js/tota11y.min.js"></script>  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>               
+        <script src="js/main.js"></script>       
+    </head>
+    <body>
+        <header>
+            <nav class="main-navigation">
+                <div class="nav__collapse-btn">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ul role="menubar">
+                    <li role="presentation">
+                        <a href="index.html" class="nav__logo nav__link" role="menuitem">Kayla Clements</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="index.html" class="nav__link" role="menuitem">Home</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="about.html" class="nav__link" role="menuitem">About</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="work.html" class="nav__link" role="menuitem">Work</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="contact.html" class="nav__link nav__link--active" role="menuitem">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="contact"> 
+                <form action="" method="POST" id="contact__form">
+                    <h1>Contact Me</h1>
+                    <div class="form__container--inline">
+                        <label for="name">*Name:</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form__container--inline">
+                        <label for="tel">Tel:</label>
+                        <input type="tel" id="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+                    </div>
+                    <div class="form__container--inline">
+                        <label for="email">*Email:</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form__container--inline">
+                        <label for="message">*Message:</label>
+                        <textarea id="message" maxlength="240" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send</button>
+                </form>
+                <div id="contact__info">
+                    <a href="mailto:michaela.s.clements@gmail.com" class="btn">Email me &#9993;</a> <span>michaela.s.clements@gmail.com</span> <br>
+                    <a href="tel:9314444632" class="btn">Call me &#9743;</a> <span>(931) 444-4632</span>
+                </div>                            
+            </section>
+        </main>    
+        <footer>
+            <p>Find me on</p>
+            <div class="social-icons">
+                <a href="https://github.com/kaykay1424"><img src="img/social_icons/github_icon.svg" alt="Github"></a>
+                <a href="https://codepen.io/kaykay1424/"><img src="img/social_icons/codepen_icon.svg" alt="CodePen"></a>
+                <a href="https://www.linkedin.com/in/michaela-clements-6b2aa67b/"><img src="img/social_icons/linkedin_icon.svg" alt="LinkedIn"></a>
+            </div>
+        </footer>  
+    </body>
+</html>

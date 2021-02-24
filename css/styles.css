@@ -577,6 +577,7 @@ footer {
         background-color: var(--dark-gray-color);
     }
 }
+
 @keyframes change-sun-color {
     0% {
         fill: #edc655;
@@ -588,6 +589,7 @@ footer {
         fill: #f76414;
     }
 }
+
 @keyframes move-cloud {
     from {
         transform: translate(80%,10px);
@@ -596,6 +598,7 @@ footer {
         transform: translate(10%,10px);
     }
 }
+
 @keyframes move-cloud-reverse {
     from {
         transform: translate(10%,30px);

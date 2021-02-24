@@ -77,7 +77,7 @@ h6 {
 }
 /* - */
 main {
-    line-height: 150%;
+    line-height: 200%;
     margin: 100px auto 100px auto;
     max-width: 100%;
     min-height: 100%;
@@ -297,39 +297,67 @@ footer {
     top: 100%;
     width: 100%;
 }
-footer a {
+.social-icons a {
     border-bottom: none;
 }
-footer a:first-child img {
+.social-icons a:first-child img {
     margin-left: 0;
 }
-footer img {
+.social-icons img {
     height: 30px;
     margin-left: 1em;
     width: 30px;
+}
+.social-icons img:hover {
+    opacity: .6;
 }
 
 /* Pages */
 /* -Home Page */
 #profile {
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin: 0 auto;
     max-width: 100%;
     width: 700px;
 }
-#profile figure {
-    /* margin-left: 0; */
-    
-    float: left;
+#profile__portrait-container {
+    margin-right: 1em;
     margin-top: 0;
+    position: relative;
     /* width: 45%;  */
 }
-#profile div {
-    /* width: 45%; */
+#profile__portrait-container .speech-bubble {
+    background-color: #fff;
+    border: 3px solid #000;
+    border-radius: 50%;
+    position: absolute;
 }
-#profile img {
+#profile__portrait-container .speech-bubble:nth-of-type(2) {
+    height: 20px;
+    left: 95%;
+    top: 50%;
+    width: 20px;
+}
+#profile__portrait-container .speech-bubble:nth-of-type(1) {
+    height: 15px;
+    left: 75%;
+    top: 60%;
+    width: 15px;
+}
+#profile__portrait-container .speech-bubble:nth-of-type(2).animate {
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+}
+#profile__portrait-container .speech-bubble.animate {
+    -webkit-animation: 1s change-speech-bubble-color infinite alternate linear;
+            animation: 1s change-speech-bubble-color infinite alternate linear;
+}
+.profile__portrait {
     /* align-self: center; */
     border-radius: 20px;
     /* float: left; */
@@ -338,16 +366,35 @@ footer img {
     max-width: 100%;
     width: 250px;
 }
+#profile__intro {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    background-color: #fff;
+    border: 3px solid #000;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+#profile__intro h1 {
+    font-family: 'Roboto',serif;
+}
+#profile__intro span {
+    visibility: hidden;
+}
+#profile__intro a {
+    display: none;
+}
 #profile code {
     background-color: #000;
     color: #bd994d;
     padding: 5px;
 }
 /* -About Page */
-#bio,
-#skills {
+#bio,#skills  {
+    margin-left: auto;
+    margin-right: auto;
     max-width: 100%;
-    width: 500px;
+    width: 600px;
 }
 /* --Illustration */
 .berlin-illustration {
@@ -366,10 +413,23 @@ footer img {
             animation: 4s change-sun-color infinite alternate linear;
 }
 /* --Skills */
+#skills {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    /* width: 100%; */
+}
 /* ---Filter Skills Form */
 #skills__form {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
     border: 1px solid #000;
-    margin: 1em auto;
+    margin-bottom: 1em;
     max-width: 100%;
     width: 300px;
     padding: 10px;
@@ -472,7 +532,7 @@ textarea {
 #contact__info .btn {
     background-color:#FF7500;
     border: 1px solid #FF7500;
-    color: #fff;
+    color: #000;
     display: inline-block;
     margin-bottom: 1em;
     margin-right: 1em;
@@ -525,7 +585,7 @@ textarea {
 }
 #projects .projects__code-link:hover {
     background-color: #FF7500;
-    color: #fff;
+    color: #000;
 }
 #projects .projects__project-link {
     border-color: #0b6baf;
@@ -554,7 +614,7 @@ textarea {
 /* ---Skills */
 .projects__backend-skills li {
     background-color: #FF7500;
-    color: #fff;
+    color: #000;
 }
 .projects__frontend-skills li {
     background-color: #0b6baf;
@@ -581,6 +641,23 @@ textarea {
 }
 
 /* Animations */
+@-webkit-keyframes change-speech-bubble-color {
+    0% {
+        background-color: #fff;
+    }
+    100% {
+        background-color: #707070;
+    }
+}
+@keyframes change-speech-bubble-color {
+    0% {
+        background-color: #fff;
+    }
+    100% {
+        background-color: #707070;
+    }
+}
+
 @-webkit-keyframes change-sun-color {
     0% {
         fill: #edc655;
@@ -592,6 +669,7 @@ textarea {
         fill: #f76414;
     }
 }
+
 @keyframes change-sun-color {
     0% {
         fill: #edc655;
@@ -603,6 +681,7 @@ textarea {
         fill: #f76414;
     }
 }
+
 @-webkit-keyframes move-cloud {
     from {
         -webkit-transform: translate(80%,10px);
@@ -613,6 +692,7 @@ textarea {
                 transform: translate(10%,10px);
     }
 }
+
 @keyframes move-cloud {
     from {
         -webkit-transform: translate(80%,10px);
@@ -623,6 +703,7 @@ textarea {
                 transform: translate(10%,10px);
     }
 }
+
 @-webkit-keyframes move-cloud-reverse {
     from {
         -webkit-transform: translate(10%,30px);
@@ -633,6 +714,7 @@ textarea {
                 transform: translate(80%,30px);
     }
 }
+
 @keyframes move-cloud-reverse {
     from {
         -webkit-transform: translate(10%,30px);
@@ -707,6 +789,35 @@ textarea {
     h1 {
         font-size: 1.8rem;
     }
+}
+
+@media screen and (max-width: 700px) {
+    #profile {
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    #profile__portrait-container {
+        margin-right: 0;
+        margin-bottom: 1em;
+    }
+    #profile__portrait-container .speech-bubble:nth-of-type(1) {
+        left: 55%;
+        top: 80%;
+    }
+    #profile__portrait-container .speech-bubble:nth-of-type(2) {
+        left: 55%;
+        top: 95%;
+    }
+    #profile__intro {
+        -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
+            align-self: center;
+    }     
 }
 
 @media screen and (max-width: 800px) {

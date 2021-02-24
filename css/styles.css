@@ -258,16 +258,19 @@ footer {
     top: 100%;
     width: 100%;
 }
-footer a {
+.social-icons a {
     border-bottom: none;
 }
-footer a:first-child img {
+.social-icons a:first-child img {
     margin-left: 0;
 }
-footer img {
+.social-icons img {
     height: 30px;
     margin-left: var(--main-margin);
     width: 30px;
+}
+.social-icons img:hover {
+    opacity: .6;
 }
 
 /* Pages */

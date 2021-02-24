@@ -513,7 +513,7 @@ footer img {
 }
 #projects .projects__code-link:hover {
     background-color: var(--secondary-color);
-    color: #fff;
+    color: #000;
 }
 #projects .projects__project-link {
     border-color: var(--primary-color);
@@ -542,7 +542,7 @@ footer img {
 /* ---Skills */
 .projects__backend-skills li {
     background-color: var(--secondary-color);
-    color: #fff;
+    color: #000;
 }
 .projects__frontend-skills li {
     background-color: var(--primary-color);

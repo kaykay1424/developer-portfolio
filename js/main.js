@@ -71,5 +71,12 @@ $(document).ready(function() {
                 $('#skills__table tbody tr').removeClass('filtered');
             });
         break;
+        case 'work-page':
+            $('.grid__item').hover(function() {
+                $(this).find('.projects__links, .projects__img').fadeIn(300);
+            }, function() {
+                $(this).find('.projects__links, .projects__img').fadeOut(300);
+            })
+        break;
     }
 })

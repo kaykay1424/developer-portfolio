@@ -97,6 +97,13 @@ p {
     line-height: 140%;
 }
 /* -Section */
+.section-heading {
+    /* background-color: var(--dark-gray-color);
+    color: #fff; */
+    color: var(--dark-gray-color);
+    /* padding: var(--main-padding);
+    text-shadow: 1px 1px 1px #000; */
+}
 section {
     margin: auto;
     /* max-width: 100%;
@@ -344,11 +351,15 @@ footer {
     padding: var(--small-element-padding);
 }
 /* -About Page */
-#bio,#skills  {
+#about-page main {
+    width: 600px;
+}
+#bio,
+#skills {
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;
-    width: 600px;
+    /* width: 600px; */
 }
 /* --Illustration */
 .berlin-illustration {
@@ -365,9 +376,9 @@ footer {
 }
 /* --Skills */
 #skills {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-evenly; */
     /* width: 100%; */
 }
 /* ---Filter Skills Form */
@@ -375,6 +386,8 @@ footer {
     align-self: flex-start;
     border: var(--main-border);
     margin-bottom: var(--main-margin);
+    margin-left: auto;
+    margin-right: auto;
     max-width: 100%;
     width: 300px;
     padding: var(--main-padding);

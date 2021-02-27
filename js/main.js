@@ -78,5 +78,11 @@ $(document).ready(function() {
                 $(this).find('.projects__links, .projects__img').fadeOut(300);
             })
         break;
+        case 'contact-page':
+            $('#contact__form').submit((e) => {
+                e.preventDefault();
+                alert('Thank you for contacting me!');
+            })
+        break;
     }
 })

@@ -6,8 +6,8 @@
     --error-color: rgb(189, 8, 8);
     --light-gray-color: #f0efef;    
     --primary-color: #0b6baf;
-    --secondary-color: #FF7500;
-     /* #FF4C27 
+    --secondary-color: #ff7500;
+    /* #FF4C27 
     #F5CD7F
     */
     --primary-text-color: #2b2b2b;
@@ -16,8 +16,8 @@
     --main-border-radius: 5px;
     /* -Font */
     --primary-font-size: 1rem;
-    --primary-font: 'Lato',sans-serif;
-    --secondary-font: 'Roboto',serif; 
+    --primary-font: 'Lato', sans-serif;
+    --secondary-font: 'Roboto', serif; 
     /* -Spacing */
     --main-margin: 1em;
     --main-padding: 10px;
@@ -43,13 +43,13 @@ a:not(.nav__link):not(.btn):hover {
     text-decoration: underline;
 }
 a:not(.nav__link):visited {
-    color: #1BBC87;
+    color: #1bbc87;
 }  
 a:active {
-    color: #FF998A;
+    color: #ff998a;
 }
 /* - */
-body {
+body {    
     background-color: #f9f9f9;
     color: var(--primary-text-color);
     font-family: var(--primary-font);
@@ -86,7 +86,7 @@ h6 {
 /* - */
 main {
     line-height: 200%;
-    margin: 100px auto 100px auto;
+    margin: 100px auto;
     max-width: 100%;
     min-height: 100%;
     padding: var(--main-padding);
@@ -131,12 +131,12 @@ section > * {
     font-size: var(--primary-font-size);
     padding: var(--main-padding);
     text-decoration: none;
-    transition: opacity .3s;
+    transition: opacity 0.3s;
 }
 .btn:focus,
 .btn:hover {
     cursor: pointer;
-    opacity: .7;
+    opacity: 0.7;
 }
 /* --Form Container */
 .form__container--inline {
@@ -277,7 +277,7 @@ footer {
     width: 30px;
 }
 .social-icons img:hover {
-    opacity: .6;
+    opacity: 0.6;
 }
 
 /* Pages */
@@ -375,12 +375,6 @@ footer {
     animation: 4s change-sun-color infinite alternate linear;
 }
 /* --Skills */
-#skills {
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly; */
-    /* width: 100%; */
-}
 /* ---Filter Skills Form */
 #skills__form {
     align-self: flex-start;
@@ -427,7 +421,9 @@ footer {
 #skills__table tbody tr:nth-child(odd) {
     background-color: var(--beige-color);
 }
-#skills__table td,th,tr {
+#skills__table td,
+th,
+tr {
     border: var(--main-border);  
     padding: var(--main-padding);
 }
@@ -449,7 +445,7 @@ footer {
     max-width: 100%;
     padding: var(--main-padding);
     width: 400px;
-  }
+}
 #contact__form h1 {
     text-align: center;
 }
@@ -460,7 +456,8 @@ footer {
 #contact__form input {
     height: 30px;
 }
-#contact__form input,textarea {
+#contact__form input,
+textarea {
     background-color: var(--light-gray-color);
     border: var(--main-border);
     border-radius: 3px;
@@ -475,7 +472,7 @@ footer {
     width: 400px;
 }
 #contact__info .btn {
-    background-color:var(--secondary-color);
+    background-color: var(--secondary-color);
     border: 1px solid var(--secondary-color);
     color: #000;
     display: inline-block;
@@ -509,12 +506,9 @@ footer {
     position: relative;
 }
 #projects .grid__item {
-    background-size: 0px 0px;
+    background-size: 0 0;
     padding: 0;
     position: relative;
-}
-#projects .grid__item:hover {
-    /* background-size: 100% 100%; */
 }
 #projects .grid__item *:not(img):not(hr):not(ul):not(.projects__skills) {
     padding: var(--main-padding);
@@ -553,7 +547,7 @@ footer {
     background-color: #fff;
     border: 1px solid;
     display: inline-block;
-    margin: .5em;
+    margin: 0.5em;
 }
 /* ---Skills */
 .projects__backend-skills li {
@@ -566,7 +560,7 @@ footer {
 }
 .projects__skills li {
     border-radius: 10px;
-    font-size: .8em;
+    font-size: 0.8em;
     margin: 8px;
     /* margin-left: 8px;
     margin-right: 8px; */
@@ -605,19 +599,19 @@ footer {
 
 @keyframes move-cloud {
     from {
-        transform: translate(80%,10px);
+        transform: translate(80%, 10px);
     }
     to {
-        transform: translate(10%,10px);
+        transform: translate(10%, 10px);
     }
 }
 
 @keyframes move-cloud-reverse {
     from {
-        transform: translate(10%,30px);
+        transform: translate(10%, 30px);
     }
     to {
-        transform: translate(80%,30px);
+        transform: translate(80%, 30px);
     }
 }
 
@@ -641,10 +635,6 @@ footer {
     .form__container--inline textarea {
         width: 100%;
     }
-    .main-navigation {
-        /* display: flex;
-        justify-content: space-between; */
-    }
     .main-navigation .nav__link {
         display: block;
     }
@@ -664,11 +654,6 @@ footer {
         margin-left: 0;
         margin-top: var(--main-margin);
     }
-    /* .main-navigation ul.active {
-
-        display: block;
-       
-    } */
     h1 {
         font-size: 1.8rem;
     }

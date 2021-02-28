@@ -1,5 +1,7 @@
 /* Variables */
 :root {
+    /* -Animations */
+    --main-transition-speed: 0.8s;
     /* -Colors */
     --beige-color: #f5f5dc;
     --dark-gray-color: #707070;
@@ -198,14 +200,26 @@ section > * {
     color: #fff;
     padding: var(--main-padding);
 }
-.main-navigation a:not(.nav__link--active):hover {
+.main-navigation .nav__link:not(.nav__link--active)::after { 
+    content: '';  
+    opacity: 0;
+    width: 100%;
+    transition: opacity var(--main-transition-speed);
+}
+.main-navigation .nav__link:not(.nav__link--active):hover::after {
     border-bottom: 1px solid #fff;
-    padding-bottom: var(--small-element-padding);
+    content: '';
+    left: 0;
+    position: absolute;
+    bottom: 0;
+    opacity: 1;
+    width: 100%;
 }
 .main-navigation li {
     flex: 0 1 60px;
     list-style: none;
     margin-left: var(--main-margin);
+    position: relative;
 }
 .main-navigation li:first-child {
     flex-grow: 1;

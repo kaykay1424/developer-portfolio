@@ -2,6 +2,12 @@ $(document).ready(function() {
     $('.nav__collapse-btn').click(function() {
         $(this).siblings('ul').fadeToggle();        
     })
+    $(window).resize(function() {
+        let windowWidth = $(window).width();
+        if (windowWidth > 600) {
+            $('.nav__collapse-btn').siblings('ul').css('display','flex');
+        }
+    });
     let page = $('body').prop('id');
     switch(page) {
         case 'home-page':

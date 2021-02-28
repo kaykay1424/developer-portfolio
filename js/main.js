@@ -6,6 +6,8 @@ $(document).ready(function() {
         let windowWidth = $(window).width();
         if (windowWidth > 600) {
             $('.nav__collapse-btn').siblings('ul').css('display','flex');
+        } else {
+            $('.nav__collapse-btn').siblings('ul').css('display','block');
         }
     });
     let page = $('body').prop('id');

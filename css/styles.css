@@ -1,6 +1,7 @@
 /* Variables */
 :root {
     /* -Animations */
+    --btn-transition-speed: 0.3s;
     --main-transition-speed: 0.8s;
     /* -Colors */
     --beige-color: #f5f5dc;
@@ -133,7 +134,7 @@ section > * {
     font-size: var(--primary-font-size);
     padding: var(--main-padding);
     text-decoration: none;
-    transition: opacity 0.3s;
+    transition: opacity var(--btn-transition-speed);
 }
 .btn:focus,
 .btn:hover {
@@ -231,6 +232,7 @@ section > * {
     color: var(--secondary-color);
 }
 .main-navigation ul {
+    align-items: center;    
     display: flex;
     flex-wrap: wrap;
     /* justify-content: space-evenly; */
@@ -288,6 +290,7 @@ footer {
     height: 30px;
     margin-left: var(--main-margin);
     width: 30px;
+    transition: opacity var(--btn-transition-speed);
 }
 .social-icons img:hover {
     opacity: 0.6;

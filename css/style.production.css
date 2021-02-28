@@ -7,6 +7,7 @@
 
 /* Variables */
 :root {
+    /* -Animations */
     /* -Colors */
     /* #FF4C27 
     #F5CD7F
@@ -139,9 +140,9 @@ section > * {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-bottom: 1em;
     width: 100%;
 }
@@ -222,11 +223,23 @@ section > * {
 }
 .main-navigation a {
     color: #fff;
+    display: inline-block;
     padding: 10px;
 }
-.main-navigation a:not(.nav__link--active):hover {
+.main-navigation .nav__link:not(.nav__link--active)::after { 
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.8s;
+    -o-transition: opacity 0.8s;
+    transition: opacity 0.8s; 
+}
+.main-navigation .nav__link:not(.nav__link--active):hover::after {
     border-bottom: 1px solid #fff;
-    padding-bottom: 5px;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    width: 100%;
 }
 .main-navigation li {
     -webkit-box-flex: 0;
@@ -234,6 +247,7 @@ section > * {
             flex: 0 1 60px;
     list-style: none;
     margin-left: 1em;
+    position: relative;
 }
 .main-navigation li:first-child {
     -webkit-box-flex: 1;
@@ -442,7 +456,7 @@ footer {
 /* ----Buttons */
 #skills__form button {
     display: inline-block;
-    margin-top: 1em;
+    margin: 1em;
 }
 #skills__form [type="submit"] {
     background-color: #0b6baf;

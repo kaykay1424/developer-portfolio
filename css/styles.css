@@ -198,21 +198,20 @@ section > * {
 }
 .main-navigation a {
     color: #fff;
+    display: inline-block;
     padding: var(--main-padding);
 }
 .main-navigation .nav__link:not(.nav__link--active)::after { 
-    content: '';  
+    content: '';
     opacity: 0;
-    width: 100%;
-    transition: opacity var(--main-transition-speed);
+    transition: opacity var(--main-transition-speed); 
 }
 .main-navigation .nav__link:not(.nav__link--active):hover::after {
     border-bottom: 1px solid #fff;
-    content: '';
-    left: 0;
-    position: absolute;
     bottom: 0;
+    left: 0;
     opacity: 1;
+    position: absolute;
     width: 100%;
 }
 .main-navigation li {

@@ -142,7 +142,7 @@ section > * {
 .form__container--inline {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     margin-bottom: var(--main-margin);
     width: 100%;
 }
@@ -392,7 +392,7 @@ footer {
 /* ----Buttons */
 #skills__form button {
     display: inline-block;
-    margin-top: var(--main-margin);
+    margin: var(--main-margin);
 }
 #skills__form [type="submit"] {
     background-color: var(--primary-color);

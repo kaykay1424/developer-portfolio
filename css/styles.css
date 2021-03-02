@@ -485,6 +485,7 @@ textarea {
 #contact__info {
     margin: var(--main-margin) auto;
     max-width: 100%;
+    text-align: center;
     width: 400px;
 }
 #contact__info .btn {

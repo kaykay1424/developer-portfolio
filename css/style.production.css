@@ -549,6 +549,7 @@ textarea {
 #contact__info {
     margin: 1em auto;
     max-width: 100%;
+    text-align: center;
     width: 400px;
 }
 #contact__info .btn {

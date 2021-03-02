@@ -1,14 +1,26 @@
 $(document).ready(function() {
     $('.nav__collapse-btn').click(function() {
-        $(this).siblings('ul').fadeToggle();        
+        let navbarList = $('.nav__collapse-btn').siblings('ul');        
+        if (navbarList.css('display') !== 'block') {
+            navbarList.addClass('open').removeClass('collapsed');
+        } else {
+            navbarList.addClass('collapsed').removeClass('open');
+        }  
+        navbarList.fadeToggle();      
     })
     $(window).resize(function() {
         let windowWidth = $(window).width();
-        if (windowWidth > 600) {
-            $('.nav__collapse-btn').siblings('ul').css('display','flex');
-        } else {
-            $('.nav__collapse-btn').siblings('ul').css('display','block');
-        }
+        let navbarList = $('.nav__collapse-btn').siblings('ul');
+        if (windowWidth > 600) {            
+            navbarList.css('display','flex');
+            navbarList.removeClass('open collapsed');
+        } else {                            
+            if (navbarList.hasClass('collapsed') || !navbarList.hasClass('open')) {
+                navbarList.css('display','none');
+            } else if (navbarList.hasClass('open')) {
+                navbarList.css('display','block');
+            }            
+        }           
     });
     let page = $('body').prop('id');
     switch(page) {

@@ -92,17 +92,25 @@ $(document).ready(function() {
             });
         break;
         case 'work-page':
-            $('.grid__item').hover(function() {
-                $(this).find('.projects__links, .projects__img').fadeIn(300);
-            }, function() {
-                $(this).find('.projects__links, .projects__img').fadeOut(300);
-            })
         break;
         case 'contact-page':
             $('#contact__form').submit((e) => {
                 e.preventDefault();
                 alert('Thank you for contacting me!');
             })
+        break;
+        case 'tv-show-explorer-case-study-page': 
+           // Add zoom capability to images related to project 
+           $('.case-study-img')
+           .wrap('<span style="display: inline-block;"></span>')
+           .css('display', 'block')
+           .parent()
+           .zoom({
+               url: $(this).attr('src'),
+               callback: function() {
+                   $(this).css('cursor', 'zoom-in')
+               }
+           }); 
         break;
     }
 })

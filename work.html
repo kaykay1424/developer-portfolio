@@ -8,16 +8,17 @@
         <!-- Google Font -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!-- CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" rel="stylesheet">        
         <!-- JS -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>   
         <script src="js/main.js"></script>                   
         <!-- Development Only --> 
-        <!-- <link href="css/styles.css" type="text/css" rel="stylesheet">     
-        <script src="js/tota11y.min.js"></script> -->
+        <link href="css/styles.css" type="text/css" rel="stylesheet">     
+        <script src="js/tota11y.min.js"></script>
         <!-- Production Only -->
-        <link href="css/style.production.css" type="text/css" rel="stylesheet">
     </head>
     <body id="work-page">
         <header>
@@ -51,96 +52,93 @@
                 <h1 class="page-title">Projects</h1>
                 <div class="grid">
                     <div class="grid__item">
-                        <h2 class="projects__title">TV Show Explorer</h2>
+                        <h2 class="projects__title">
+                            <span>TV Show Explorer </span>
+                            <div class="projects__links">
+                                <a href="https://kaykay1424.github.io/tv-shows/" target="_blank" title="View project">
+                                    <i class="fas fa-external-link-alt"></i> 
+                                </a>
+                                <a href="https://github.com/kaykay1424/tv-shows" title="View code on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a> 
+                                <a href="tv-show-explorer-case-study.html" title="View case study">
+                                    <i class="far fa-file-alt"></i>
+                                </a>
+                            </div>
+                        </h2>
+                        <img src="img/projects/tv-show-explorer/tv-show-explorer__home-page.png" class="projects__img" alt="image of TV Show Explorer app">
                         <p class="projects__description">TV Show Explorer lets users search for TV shows, sort TV shows by categories, such as language, and view details about TV shows, like the episodes and cast.</p>
-						<img src="img/projects/tv-show-explorer__home-page.png" class="projects__img" alt="image of TV Show Explorer app">
-                        <hr>
                         <div class="projects__skills">
-                            <ul class="projects__frontend-skills">
-								<li>HTML</li>
-								<li>CSS</li>
-								<li>Bootstrap</li>
-								<li>JS</li>
-								<li>jQuery</li>
-                            </ul>
-                            <ul class="projects__backend-skills">
-								<li>TVMAZE API</li>
-                            </ul>
+                            <i class="fab fa-html5"></i>
+                            <i class="fab fa-css3-alt"></i>
+                            <i class="fab fa-bootstrap"></i>
+                            <i class="fab fa-js-square"></i>
                         </div>
-                        <div class="projects__links">
-                            <a class="projects__code-link" href="https://github.com/kaykay1424/tv-shows" target="_blank">View code</a>  
-                            <a class="projects__project-link" href="https://kaykay1424.github.io/tv-shows/" target="_blank">View project</a>
-                        </div>  
                     </div>
                     <div class="grid__item">
-                        <h2 class="projects__title">Wikipedia Viewer</h2>
-                        <p class="projects__description">The Wikipedia Viewer allows users to search for a Wikipedia article and choose the amount of articles to be returned. Users can bookmark an article to read later or favorite an article, which will then be stored in the browser's local storage.</p>
-                        <img src="img/projects/wikipedia-viewer.jpg" class="projects__img" alt="image of Wikipedia Viewer project">
-                        <hr>
+                        <h2 class="projects__title">
+                            <span>myFlix</span>
+                            <div class="projects__links">
+                                <a href="https://kaykay1424.github.io/myFlix-client/" target="_blank" title="View project">
+                                    <i class="fas fa-external-link-alt"></i> 
+                                </a>
+                                <a href="https://github.com/kaykay1424/myFlix-client" title="View code on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a> 
+                            </div>
+                        </h2>
+                        <img src="img/projects/myFlix(React).png" class="projects__img" alt="image of myFlix project">
+                        <p class="projects__description">myFlix is a single-page, responsive app built with React that allows users access to information about movies, actors, directors, and genres through routing, user interactions, and user interfaces.</p>                        
                         <div class="projects__skills">
-                            <ul class="projects__frontend-skills">
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>Bootstrap</li>
-                                <li>JS</li>
-                                <li>jQuery</li>
-                            </ul>
-                            <ul class="projects__backend-skills">
-                                <li>API</li>
-                            </ul>
+                            <i class="fab fa-html5"></i>
+                            <i class="fab fa-sass"></i>
+                            <i class="fab fa-bootstrap"></i>
+                            <i class="fab fa-js-square"></i>
+                            <i class="fab fa-react"></i>
                         </div>
-                        <div class="projects__links">
-                            <a class="projects__code-link" href="https://github.com/kaykay1424/wikipedia-viewer" target="_blank">View code</a>  
-                            <a class="projects__project-link" href="https://kaykay1424.github.io/wikipedia-viewer/" target="_blank">View project</a>
-                        </div>  
                     </div>
 					<div class="grid__item">
-						<h2 class="projects__title">Event Finder</h2>
+						<h2 class="projects__title">
+                            <span>Event Finder</span>
+                            <div class="projects__links">
+                                <a href="https://kaykay1424.github.io/event-finder/" target="_blank" title="View project">
+                                    <i class="fas fa-external-link-alt"></i> 
+                                </a>
+                                <a href="https://github.com/kaykay1424/event-finder" title="View code on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a> 
+                            </div>
+                        </h2>
+                        <img src="img/projects/event-finder.png" class="projects__img" alt="image of Event Finder project">
 						<p class="projects__description">Event Finder is a progressive web application built with React and a serverless background that is capable of working offline and lets users view upcoming events in various cities as well as filter events by city.</p>
-						<img src="img/projects/event-finder.png" class="projects__img" alt="image of Event Finder project">
-						<hr>
-						<div class="projects__skills">
-							<ul class="projects__frontend-skills">
-								<li>HTML</li>
-								<li>CSS</li>
-								<li>JS</li>
-								<li>React</li>
-							</ul>
-							<ul class="projects__backend-skills">
-								<li>Google Calendar Api</li>
-								<li>Faas (AWS Lambda)</li>
-							</ul>
-						</div>
-						<div class="projects__links">
-							<a class="projects__code-link" href="https://github.com/kaykay1424/event-finder" target="_blank">View code</a>  
-							<a class="projects__project-link" href="https://kaykay1424.github.io/event-finder/" target="_blank">View project</a>
-						</div>  
+                        <div class="projects__skills">
+                            <i class="fab fa-html5"></i>
+                            <i class="fab fa-css3-alt"></i>
+                            <i class="fab fa-js-square"></i>
+                            <i class="fab fa-react"></i>
+                            <i class="fab fa-aws"></i>
+                        </div> 
 					</div> 
                     <div class="grid__item">
-                        <h2 class="projects__title">Wikipedia Viewer</h2>
-                        <p class="projects__description">The Wikipedia Viewer allows users to search for a Wikipedia article and choose the amount of articles to be returned. Users can bookmark an article to read later or favorite an article, which will then be stored in the browser's local storage.</p>
-                        <img src="img/projects/wikipedia-viewer.jpg" class="projects__img" alt="image of Wikipedia Viewer project">
-                        <hr>
+                        <h2 class="projects__title">
+                            <span>Polychat</span>
+                            <div class="projects__links">
+                                <a href="https://github.com/kaykay1424/chat-app" title="View code on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a> 
+                            </div>
+                        </h2>
+                        <img src="img/projects/polychat.png" class="projects__img" alt="image of Polychat project">
+                        <p class="projects__description">Polychat is a mobile app built with React Native that gives users the option to not only chat in different languages with others but share images and their location as well. There are 4 chat rooms for users to chat in English, Spanish, Chinese, and French.</p>
                         <div class="projects__skills">
-                            <ul class="projects__frontend-skills">
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>Bootstrap</li>
-                                <li>JS</li>
-                                <li>jQuery</li>
-                            </ul>
-                            <ul class="projects__backend-skills">
-                                <li>API</li>
-                            </ul>
-                        </div>
-                        <div class="projects__links">
-                            <a class="projects__code-link" href="https://github.com/kaykay1424/wikipedia-viewer" target="_blank">View code</a>  
-                            <a class="projects__project-link" href="https://kaykay1424.github.io/wikipedia-viewer/" target="_blank">View project</a>
-                        </div>  
+                            <i class="fab fa-html5"></i>
+                            <i class="fab fa-js-square"></i>
+                            <i class="fab fa-react"></i>
+                        </div> 
                     </div>         
                 </div> <!-- .grid -->
             </section>
-        </main>
+        </main>        
         <footer>
             <p>Find me on</p>
             <div class="social-icons">

@@ -25,6 +25,23 @@ $(document).ready(function() {
     let page = $('body').prop('id');
     switch(page) {
         case 'home-page':
+            // Show section related to menu item clicked on
+            $('#about-nav li').click(function() {
+                const section = $(this).data('target');
+                let displayStyle;
+                if ($(this).data('display-style') === 'flex-row') displayStyle = {display: 'flex'};
+                if ($(this).data('display-style') === 'flex-column') displayStyle = {display: 'flex', flexDirection: 'column'};
+                $('#about-nav li').removeClass('active');
+                $(this).addClass('active');
+                $('#home-page section').fadeOut('ease');
+                $(section).fadeIn('ease').css(displayStyle);
+            });
+
+            // Show content related to timeline point when timeline header is clicked on
+            $('.timeline__content__section .subheader').click(function() {
+                $(this).parent().find('ul').fadeToggle();
+            });
+
             function showLetter(letter,index) {
                 let numLetters = $('#profile__intro span').length;
                 if (index < numLetters) {
@@ -35,10 +52,23 @@ $(document).ready(function() {
                     },100);                    
                 } else { // end of animation, show code link
                     setTimeout(function() {
-                        $('#profile__intro a').slideDown();
+                        $('#profile__intro div p').fadeTo(1000, 1, function() {
+                            delayFade( $('#profile__intro div a'), 'block', 0);
+                        });
+                        
                         $('.speech-bubble').removeClass('animate');
                     },1000)                    
                 }                
+            }
+            function delayFade(elements, displayStyle, i) {
+                
+                setTimeout(function() {
+                    elements.eq(i).fadeTo(1000, 1);
+                    if (i < elements.length) {
+                        delayFade(elements, displayStyle, i+1);
+                    }
+                }, i+1000);
+                
             }
             showLetter($('#profile__intro span').eq(0),0);
             $('.speech-bubble').addClass('animate');

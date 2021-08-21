@@ -52,16 +52,16 @@ $(document).ready(function() {
                     },100);                    
                 } else { // end of animation, show code link
                     setTimeout(function() {
-                        $('#profile__intro div p').fadeTo(1000, 1, function() {
-                            delayFade( $('#profile__intro div a'), 'block', 0);
+                        $('#profile__intro div p:first-child').fadeTo(1000, 1, function() {
+                            delayFade( $('#profile__intro div .link'), 'block', 0);
                         });
                         
                         $('.speech-bubble').removeClass('animate');
                     },1000)                    
                 }                
             }
+
             function delayFade(elements, displayStyle, i) {
-                
                 setTimeout(function() {
                     elements.eq(i).fadeTo(1000, 1);
                     if (i < elements.length) {
@@ -122,6 +122,34 @@ $(document).ready(function() {
             });
         break;
         case 'work-page':
+            // Filter projects shown based on skill selected
+            $('#skills-nav li').click(function() {
+                $(this).toggleClass('active');
+                // If no skill has been selected, show all projects
+                if ($('#skills-nav li.active').length === 0) {
+                    $('.grid__item').fadeIn();
+                    return;
+                }
+                // Get all filters that have been selected
+                const filters = $('#skills-nav li.active').toArray().map(function(elem) {
+                    return elem.getAttribute('data-filter'); 
+                });
+
+                $('.grid__item').removeClass('matched'); // reset visible projects
+                $('.grid__item').each(function() {
+                    const skills = $(this).find('.projects__skills i').toArray();
+                    // Check if project has any of the skills selected
+                    const isMatch = skills.find((elem) => {
+                        return filters.find((filter) => elem.classList[1].match(filter));
+                    });
+                    // If the project does have a matching skill, show it
+                    if (isMatch) {
+                        $(this).fadeIn().addClass('matched');
+                    }
+                });
+                // Hide the projects that don't match any of the selected skills
+                $('.grid__item').not('.matched').fadeOut();
+            })
         break;
         case 'contact-page':
             $('#contact__form').submit((e) => {

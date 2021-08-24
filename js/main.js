@@ -1,16 +1,20 @@
 $(document).ready(function() {
-    $('.nav__collapse-btn').click(function() {
-        let navbarList = $('.nav__collapse-btn').siblings('ul');        
-        if (navbarList.css('display') !== 'block') {
+    function toggleMenu(navbarList) {
+        const opacity = navbarList.css('opacity');  
+        const display = navbarList.css('display');      
+        if (display !== 'flex') {
             navbarList.addClass('open').removeClass('collapsed');
         } else {
             navbarList.addClass('collapsed').removeClass('open');
         }  
-        navbarList.fadeToggle();      
-    })
-    $(window).resize(function() {
+        // console.log(opacity == 1 ? 0 : 1)
+        navbarList.fadeToggle('fast').css('display', 'flex');/*.toggleClass('absolute-position'); */     
+    }
+    
+        
+    function toggleMenuResponsive(navbarList) {
         let windowWidth = $(window).width();
-        let navbarList = $('.nav__collapse-btn').siblings('ul');
+
         if (windowWidth > 600) {            
             navbarList.css('display','flex');
             navbarList.removeClass('open collapsed');
@@ -18,9 +22,23 @@ $(document).ready(function() {
             if (navbarList.hasClass('collapsed') || !navbarList.hasClass('open')) {
                 navbarList.css('display','none');
             } else if (navbarList.hasClass('open')) {
-                navbarList.css('display','block');
+                navbarList.css('display','flex');
             }            
-        }           
+        }   
+    }
+    $('.nav__collapse-btn').click(() => toggleMenu($('.main-navigation ul')));
+    $('.toggle-btn').click(() => {
+        // alert('working')
+        const caret = $(this).find('i');
+        console.log(caret);
+        caret.hasClass('fa-chevron-down') 
+            ? caret.removeClass('fa-chevron-down').addClass('fa-chevron-up')
+            : caret.removeClass('fa-chevron-up').addClass('fa-chevron-down')
+        toggleMenu($('.secondary-menu ul'));
+    });
+    $(window).resize(() => {
+        toggleMenuResponsive($('.nav__collapse-btn').siblings('ul'));
+        toggleMenuResponsive($('.toggle-btn').siblings('ul'));
     });
     let page = $('body').prop('id');
     switch(page) {
@@ -52,9 +70,9 @@ $(document).ready(function() {
                     },100);                    
                 } else { // end of animation, show code link
                     setTimeout(function() {
-                        $('#profile__intro div p:first-child').fadeTo(1000, 1, function() {
+                        // $('#profile__intro div p:first-child').fadeTo(1000, 1, function() {
                             delayFade( $('#profile__intro div .link'), 'block', 0);
-                        });
+                        // });
                         
                         $('.speech-bubble').removeClass('animate');
                     },1000)                    

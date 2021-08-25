@@ -17,11 +17,11 @@
     <script src="js/main.js"></script>       
     
     <!-- Development Only --> 
-    <link href="css/styles.css" type="text/css" rel="stylesheet">     
+    <!-- <link href="css/styles.css" type="text/css" rel="stylesheet">     
     <script src="js/tota11y.min.js"></script>
-    
+     -->
     <!-- Production Only -->
-    <!-- <link href="css/style.production.css" type="text/css" rel="stylesheet"> -->
+    <link href="css/style.production.css" type="text/css" rel="stylesheet">
 </head>
 <body id="tv-show-explorer-case-study-page">
     <header>
@@ -39,7 +39,7 @@
                     <a href="index.html" class="nav__link" role="menuitem">About</a>
                 </li>
                 <li role="presentation">
-                    <a href="work.html" class="nav__link nav__link--active" role="menuitem">Work</a>
+                    <a href="work.html" class="nav__link" role="menuitem">Work</a>
                 </li>
                     
             </ul>
@@ -111,14 +111,18 @@
                     <div>
                         <div class="step-content">
                             <p>
-                                To show the details of each show, I implemented a modal using Bootstrap that appears when the user clicks on a show. The reason I decided to use Bootstrap is because in addition to providing an out of the box solution to create mobile responsiveness and a clean UI, it also has several user functionalities, among them the modal, that allow for quick implementation and fewer lines of code. </p>
-                                <p>One of the challenges I faced while working on this section was that the content added to the modal would not be hard coded but dynamic depending on what show the user clicks on, so I had to decide whether to create a new modal each time or hard code the modal and simply edit the content inside the modal dynamically. I decided to do the latter, because this way I would not be creating unnecessary elements, since the modal doesn’t change, only the content inside it; also, hard coding the modal makes it easier to edit with jQuery because the modal will already exist within the page. The only downside I found with this, however, is having to make sure to reset the modal (i.e., clearing the content, making the first tab the active one) each time. </p>
-                                <p>Another aspect of this part of the process was to, once again, avoid unnecessary API requests when clicking on the tabs for more information about the show. Therefore, I made sure to use the debounce function so that the request would only run once per click and to only send a request if one hadn’t already been made to get the requested content.
+                                To show the details of each show, I implemented a modal using Bootstrap that appears when the user clicks on a show. The reason I decided to use Bootstrap is because in addition to providing an out of the box solution to create mobile responsiveness and a clean UI, it also has several user functionalities, among them the modal, that allow for quick implementation and fewer lines of code. 
+                            </p>
+                            <p>
+                                One of the challenges I faced while working on this section was that the content added to the modal would not be hard coded but dynamic depending on what show the user clicks on, so I had to decide whether to create a new modal each time or hard code the modal and simply edit the content inside the modal dynamically. I decided to do the latter, because this way I would not be creating unnecessary elements, since the modal doesn’t change, only the content inside it; also, hard coding the modal makes it easier to edit with jQuery because the modal will already exist within the page. The only downside I found with this, however, is having to make sure to reset the modal (i.e., clearing the content, making the first tab the active one) each time. 
+                            </p>
+                            <p>
+                                Another aspect of this part of the process was to, once again, avoid unnecessary API requests when clicking on the tabs for more information about the show. Therefore, I made sure to use the debounce function so that the request would only run once per click and to only send a request if one hadn’t already been made to get the requested content.
                             </p>
                         </div>
                         <div>
                             <img src="img/projects/tv-show-explorer/tv-show-explorer__home-page__modal.png" class="case-study-img" alt="image of list of TV show modal">
-                        <div>
+                        </div>
                     </div>
                 </li>
             </ol>
@@ -132,11 +136,11 @@
         </section>
     </main>
     <div class="social-icons">
-        <a href="https://github.com/kaykay1424" target="_blank"><img src="img/social_icons/github_icon.svg" alt="Github"></a>
-        <a href="https://codepen.io/kaykay1424/" target="_blank"><img src="img/social_icons/codepen_icon.svg" alt="CodePen"></a>
-        <a href="https://www.linkedin.com/in/michaela-clements-6b2aa67b/" target="_blank"><img src="img/social_icons/linkedin_icon.svg" alt="LinkedIn"></a>
-        <a href="michaela_clements_resume.pdf" target="_blank"><img src="img/social_icons/resume.svg" alt="Kayla's resume" /></a>
-        <a href="mailto:michaela.s.clements@gmail.com"><img src="img/social_icons/email.svg" alt="Email icon" /></a>
+        <a href="https://github.com/kaykay1424" title="https://github.com/kaykay1424" target="_blank"><img src="img/social_icons/github_icon.svg" alt="Github"></a>
+        <a href="https://codepen.io/kaykay1424/" title="https://codepen.io/kaykay1424/" target="_blank"><img src="img/social_icons/codepen_icon.svg" alt="CodePen"></a>
+        <a href="https://www.linkedin.com/in/michaela-clements-6b2aa67b/" title="https://www.linkedin.com/in/michaela-clements-6b2aa67b/" target="_blank"><img src="img/social_icons/linkedin_icon.svg" alt="LinkedIn"></a>
+        <a href="michaela_clements_resume.pdf" title="michaela_clements_resume.pdf" target="_blank"><img src="img/social_icons/resume.svg" alt="Kayla's resume" /></a>
+        <a href="mailto:michaela.s.clements@gmail.com" title="mailto:michaela.s.clements@gmail.com"><img src="img/social_icons/email.svg" alt="Email icon" /></a>
     </div>       
 </body>
 </html>

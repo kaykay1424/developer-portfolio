@@ -1,0 +1,30 @@
+{
+    "ignorePatterns": [
+        "stylelint.config.js"
+    ],
+    "env": {
+        "es6": true,
+        "jquery": true,
+        "browser": true
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+        "quotes": ["error", "single",{ "allowTemplateLiterals": true }],
+        "no-console": "error",
+        "no-prototype-builtins": "off",
+        "indent": ["error", 4, { "SwitchCase": 1 }],
+        "semi": ["error", "always"],
+        "prefer-const": ["error", {
+        "destructuring": "any",
+        "ignoreReadBeforeAssign": false
+        }],
+        "no-var": "error",
+        "max-len": "error",
+        "space-before-blocks": "error",
+        "object-curly-spacing": ["error", "never"],
+        "space-in-parens": ["error", "never"],
+        "array-bracket-spacing": ["error", "never"],
+        "computed-property-spacing": ["error", "never"] 
+    }
+}
+    

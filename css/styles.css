@@ -298,7 +298,7 @@ section > * {
 .social-icons {
     align-items: center;
     background-color: #fff;
-    bottom: 221px; /* set position relative to height of .social-icons (232) */
+    bottom: 127px; /* set position relative to half height (177) of .social-icons (354) */
     box-shadow: 1px 1px 5px;
     display: flex;
     flex-direction: column;

@@ -329,7 +329,7 @@ section > * {
         -ms-flex-align: center;
             align-items: center;
     background-color: #fff;
-    bottom: 221px; /* set position relative to height of .social-icons (232) */
+    bottom: 127px; /* set position relative to half height (177) of .social-icons (354) */
     -webkit-box-shadow: 1px 1px 5px;
             box-shadow: 1px 1px 5px;
     display: -webkit-box;
@@ -378,7 +378,7 @@ section > * {
     padding: 0;
     width: 100%;
 }
-#home-page section, 
+#home-page section,
 #tv-show-explorer-case-study-page main {
     height: 100%;
     overflow-y: auto;
@@ -1226,10 +1226,8 @@ textarea {
         border-color: rgb(15, 90, 179);
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+            -ms-flex-flow: row wrap;
+                flex-flow: row wrap;
         margin-top: 0;
         max-height: 80px;
         overflow-y: auto;
@@ -1411,6 +1409,6 @@ textarea {
     }
     #about .profile-img {
         display: block;
-        margin: 0 auto 2rem auto;
+        margin: 0 auto 2rem;
     }
 }
